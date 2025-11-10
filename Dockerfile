@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY backend/ ./backend/
+COPY src/ ./src/
 COPY frontend/ ./frontend/
 COPY models/ ./models/
 COPY config/ ./config/
@@ -23,4 +23,4 @@ COPY config/ ./config/
 EXPOSE 5000
 
 # Start application
-CMD ["python", "backend/app.py"]
+CMD ["python", "src/app.py"]
